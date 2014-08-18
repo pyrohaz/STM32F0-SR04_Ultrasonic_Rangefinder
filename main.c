@@ -247,38 +247,44 @@ int main(void)
 	//Everybody's favourite temperature dependent constant!
 	const float SpeedOfSound = 343.0f;
 
+	uint8_t PulseSent = 0;
+
 	while(1)
 	{
 		//Initially send the pulse. Using a function makes this much easier
 		//and more portable, simplifying the main code.
-		SR04_SendPulse();
-
-		//Wait until the pulse has ended! This doesn't need to be blocking and
-		//using some nifty if statement'ing, it could easily sit in the middle
-		//of some busy program. The value stored in PulseTime can't change
-		//until the pulse to the SR04 has been sent again.
-		while(!PulseEnded);
-
-		//If the timer overflowed, set PulseTime to zero. The value stored in
-		//PulseTime could be checked to see if the timer overflowed and a
-		//suitable error message could be displayed in this condition.
-		if(TimerOverflow){
-			PulseTime = 0;
-		}
-		else{ //If the timer however didn't over flow, calculate the distance
-			//Calculate the one way time of flight of the ultrasonic pulse.
-			//To ensure that the time of flight is only one way, the PulseTime
-			//is divided by two as PulseTime is the time taken for the pulses
-			//from the SR04 to be emitted, hit the object and bounce back.
-			//Therefore, by halving this, the one way pulsetime can be found.
-			TimeOfFlight = TTimePerCnt*((float)PulseTime/2.0f);
-
-			//SIDOT - Speed is Distance over Time or more so S = V*T
-			Distance = SpeedOfSound*TimeOfFlight;
+		if(PulseSent == 0){
+			PulseSent = 1;
+			SR04_SendPulse();
 		}
 
-		//Delay 1ms until next pulse to give the module a breather!
-		Delay(1);
 
+		//Instead of using a blocking check, by simply using an if statement and
+		//an additional variable named PulseSent, we can poll to check if the
+		//returned pulse has been measured. This allows the program loops to do
+		//other things while waiting for the returned pulse!
+		if(PulseSent && PulseEnded){
+			PulseSent = 0;
+			//If the timer overflowed, set PulseTime to zero. The value stored in
+			//PulseTime could be checked to see if the timer overflowed and a
+			//suitable error message could be displayed in this condition.
+			if(TimerOverflow){
+				PulseTime = 0;
+			}
+			else{ //If the timer however didn't over flow, calculate the distance
+				//Calculate the one way time of flight of the ultrasonic pulse.
+				//To ensure that the time of flight is only one way, the PulseTime
+				//is divided by two as PulseTime is the time taken for the pulses
+				//from the SR04 to be emitted, hit the object and bounce back.
+				//Therefore, by halving this, the one way pulsetime can be found.
+				TimeOfFlight = TTimePerCnt*((float)PulseTime/2.0f);
+
+				//SIDOT - Speed is Distance over Time or more so S = V*T
+				Distance = SpeedOfSound*TimeOfFlight;
+			}
+
+			//Delay 1ms until next pulse to give the module a breather!
+			Delay(1);
+		}
 	}
 }
