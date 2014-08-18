@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<history>
+   <processor signature="arm-none-eabi-gcc noversion nomachine -mcpu=cortex-m0 -mthumb -Wall -ffunction-sections -g -O0 -c -DSTM32F051R8 -DSTM32F0XX_MD -DUSE_STDPERIPH_DRIVER -D__ASSEMBLY__ -I..\..\..\workspace\HC-04Ultrasonic\semihosting -I..\..\..\workspace\HC-04Ultrasonic\stm32_lib -I..\..\..\workspace -I..\..\..\workspace\HC-04Ultrasonic\stm32_lib\inc -I..\..\..\workspace\HC-04Ultrasonic\cmsis_core -I..\..\..\workspace\HC-04Ultrasonic\cmsis_boot -I..\..\..\workspace\HC-04Ultrasonic">
+      <target file="printf.o" lastModified="147eb10b805">
+         <source file="..\..\..\stdio\printf.c" lastModified="147eb0fb413"/>
+      </target>
+      <target file="sh_cmd.o" lastModified="147eb10baa5">
+         <source file="..\..\..\semihosting\sh_cmd.s" lastModified="147eb0fb39a"/>
+      </target>
+      <target file="semihosting.o" lastModified="147eb10b40a">
+         <source file="..\..\..\semihosting\semihosting.c" lastModified="147eb0fb399"/>
+      </target>
+   </processor>
+   <processor signature="arm-none-eabi-gcc noversion nomachine -mcpu=cortex-m0 -mthumb -Wall -ffunction-sections -g -O0 -c -DSTM32F051R8 -DSTM32F0XX_MD -DUSE_STDPERIPH_DRIVER -D__ASSEMBLY__ -I..\..\..\workspace\HC-04Ultrasonic\stm32_lib -I..\..\..\workspace -I..\..\..\workspace\HC-04Ultrasonic\stm32_lib\inc -I..\..\..\workspace\HC-04Ultrasonic\cmsis_core -I..\..\..\workspace\HC-04Ultrasonic\cmsis_boot -I..\..\..\workspace\HC-04Ultrasonic">
+      <target file="stm32f0xx_gpio.o" lastModified="147eb15de63">
+         <source file="..\..\..\stm32_lib\src\stm32f0xx_gpio.c" lastModified="147eac5b99e"/>
+      </target>
+      <target file="stm32f0xx_rcc.o" lastModified="147eb15da90">
+         <source file="..\..\..\stm32_lib\src\stm32f0xx_rcc.c" lastModified="147eac58603"/>
+      </target>
+      <target file="stm32f0xx_misc.o" lastModified="147eb15e257">
+         <source file="..\..\..\stm32_lib\src\stm32f0xx_misc.c" lastModified="147eac585ea"/>
+      </target>
+      <target file="main.o" lastModified="147eb1a944f">
+         <source file="..\..\..\main.c" lastModified="147eb1a9021"/>
+      </target>
+      <target file="stm32f0xx_tim.o" lastModified="147eb15e003">
+         <source file="..\..\..\stm32_lib\src\stm32f0xx_tim.c" lastModified="147eac5c787"/>
+      </target>
+      <target file="stm32f0xx_exti.o" lastModified="147eb15e149">
+         <source file="..\..\..\stm32_lib\src\stm32f0xx_exti.c" lastModified="147eae7512f"/>
+      </target>
+      <target file="startup_stm32f0xx.o" lastModified="147eb1603b1">
+         <source file="..\..\..\cmsis_boot\startup\startup_stm32f0xx.s" lastModified="147eb15f5e8"/>
+      </target>
+      <target file="system_stm32f0xx_temp.o" lastModified="147eb15dd35">
+         <source file="..\..\..\cmsis_boot\system_stm32f0xx_temp.c" lastModified="147eac5860e"/>
+      </target>
+   </processor>
+</history>

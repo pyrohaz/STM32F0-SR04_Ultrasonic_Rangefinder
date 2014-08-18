@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dependencies>
+   <includePath signature="/I..\..\..\workspace\HC-04Ultrasonic\stm32_lib /I..\..\..\workspace /I..\..\..\workspace\HC-04Ultrasonic\stm32_lib\inc /I..\..\..\workspace\HC-04Ultrasonic\cmsis_core /I..\..\..\workspace\HC-04Ultrasonic\cmsis_boot /I..\..\..\workspace\HC-04Ultrasonic">
+      <source file="..\..\..\stm32_lib\src\stm32f0xx_exti.c" lastModified="147eae7512f">
+         <include file="..\..\..\stm32_lib\inc\stm32f0xx_exti.h"/>
+      </source>
+      <source file="..\..\..\cmsis_boot\startup\startup_stm32f0xx.s" lastModified="147eb15f5e8">
+      </source>
+      <source file="..\..\..\cmsis_core\core_cm0.h" lastModified="147eac58a05">
+         <include file="..\..\..\cmsis_core\core_cmInstr.h"/>
+         <include file="..\..\..\cmsis_core\core_cmFunc.h"/>
+      </source>
+      <source file="..\..\..\stm32_lib\inc\stm32f0xx_gpio.h" lastModified="147eac5b972">
+         <include file="..\..\..\cmsis_boot\stm32f0xx.h"/>
+      </source>
+      <source file="..\..\..\stm32_lib\inc\stm32f0xx_rcc.h" lastModified="147eac58601">
+         <include file="..\..\..\cmsis_boot\stm32f0xx.h"/>
+      </source>
+      <source file="..\..\..\stm32_lib\inc\stm32f0xx_misc.h" lastModified="147eac585e8">
+         <include file="..\..\..\cmsis_boot\stm32f0xx.h"/>
+      </source>
+      <source file="..\..\..\cmsis_boot\stm32f0xx.h" lastModified="147eac589f2">
+         <include file="..\..\..\cmsis_core\core_cm0.h"/>
+         <include file="..\..\..\cmsis_boot\system_stm32f0xx.h"/>
+      </source>
+      <source file="..\..\..\stm32_lib\src\stm32f0xx_rcc.c" lastModified="147eac58603">
+         <include file="..\..\..\stm32_lib\inc\stm32f0xx_rcc.h"/>
+      </source>
+      <source file="..\..\..\cmsis_core\core_cmInstr.h" lastModified="147eac58df7">
+      </source>
+      <source file="..\..\..\stm32_lib\src\stm32f0xx_gpio.c" lastModified="147eac5b99e">
+         <include file="..\..\..\stm32_lib\inc\stm32f0xx_gpio.h"/>
+         <include file="..\..\..\stm32_lib\inc\stm32f0xx_rcc.h"/>
+      </source>
+      <source file="..\..\..\cmsis_core\core_cmFunc.h" lastModified="147eac58dee">
+      </source>
+      <source file="..\..\..\stm32_lib\inc\stm32f0xx_exti.h" lastModified="147eae75120">
+         <include file="..\..\..\cmsis_boot\stm32f0xx.h"/>
+      </source>
+      <source file="..\..\..\stm32_lib\inc\stm32f0xx_tim.h" lastModified="147eac5c778">
+         <include file="..\..\..\cmsis_boot\stm32f0xx.h"/>
+      </source>
+      <source file="..\..\..\stm32_lib\src\stm32f0xx_misc.c" lastModified="147eac585ea">
+         <include file="..\..\..\stm32_lib\inc\stm32f0xx_misc.h"/>
+      </source>
+      <source file="..\..\..\cmsis_boot\system_stm32f0xx_temp.c" lastModified="147eac5860e">
+         <include file="..\..\..\cmsis_boot\stm32f0xx.h"/>
+      </source>
+      <source file="..\..\..\stm32_lib\src\stm32f0xx_tim.c" lastModified="147eac5c787">
+         <include file="..\..\..\stm32_lib\inc\stm32f0xx_tim.h"/>
+         <include file="..\..\..\stm32_lib\inc\stm32f0xx_rcc.h"/>
+      </source>
+      <source file="..\..\..\cmsis_boot\system_stm32f0xx.h" lastModified="147eac5860d">
+      </source>
+   </includePath>
+</dependencies>
